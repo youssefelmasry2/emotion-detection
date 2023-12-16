@@ -1,0 +1,66 @@
+first model we used a simple cnn model   ''model = tf.keras.models.Sequential([
+                                               tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
+                                                tf.keras.layers.MaxPooling2D((2, 2)),
+                                                tf.keras.layers.Flatten(),
+                                                tf.keras.layers.Dense(128, activation='relu'),
+                                                tf.keras.layers.Dense(7, activation='softmax')  # 7 classes for the 7 emotions
+                                                                                                                                ])''
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+history = model.fit(train_generator, epochs=10, validation_data=val_generator)
+test_loss, test_acc = model.evaluate(test_generator)
+print(f'Test Accuracy: {test_acc}')
+first model result was [0.4304820]
+
+trying to implent early stopping function and see result on model 2
+the accuracy increased in model 2 [0.4661465585231781]
+
+
+trying to make model3 more complexe by adding layers in model 3
+ tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+ accuracy increased [0.530509889125824]
+
+ trying to make model4 more complexe by adding layers
+  tf.keras.layers.MaxPooling2D((2, 2))
+  tf.keras.layers.Dense(256, activation='relu'),
+  tf.keras.layers.Dropout(0.5),  # Add dropout for regularization
+  accuracy decreased [0.5176929235458374]
+
+
+
+  in model 5:
+  removed dense(256) layer
+  accuracy increased [0.5500139594078064]
+
+  in model 6:
+  added more data augmention
+   rotation_range=20,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    accuracy decreased [0.44524937868118286]
+
+    in model 7:
+    removed previous data augmention and removed zoom range=0.2
+    accuracy increased [0.5628308653831482]
+    
+    in model 8:
+    add 15 epochs instead of 10
+    accuracy increased [0.568682074546814]
+
+    in model 9:
+    added 20 epochs instead of 15
+    accuracy increased[0.5834494233131409]
+
+    in model 10:
+    trying 30 epochs instead of 20
+    code stoped at 12 accuracy decreased [0.5580942034721375]
+
+    in model 11:
+    trying 25 epochs
+    code stoped at 16 and accuracy decreased[0.561437726020813]
+     
+    in model 12:
+    returned to 20 epochs changed erarly stop function to monitor accuracy instead of val_loss
+    accuracy decreased [0.5583727955818176]
+ 
+
+
