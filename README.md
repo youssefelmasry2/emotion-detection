@@ -6,7 +6,6 @@ EmoDetect is an innovative project for real-time face emotion detection using de
 ## Table of Contents
 - [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
@@ -21,8 +20,7 @@ EmoDetect is an innovative project for real-time face emotion detection using de
 - OpenCV
 - Python
 
-## Getting Started
-Follow these simple steps to get EmoDetect up and running on your machine.
+
 
 ### Prerequisites
 - Python (version 3.9or higher)
@@ -30,8 +28,7 @@ Follow these simple steps to get EmoDetect up and running on your machine.
 - OpenCV
 - numpy
 
-### Installation
- Install dependencies: `pip install -r requirements.txt`
+
 
 ## Usage
 1. Run the main script: `python emotion_det_cam.py`
