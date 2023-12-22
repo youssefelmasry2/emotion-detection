@@ -61,6 +61,48 @@ trying to make model3 more complexe by adding layers in model 3
     in model 12:
     returned to 20 epochs changed erarly stop function to monitor accuracy instead of val_loss
     accuracy decreased [0.5583727955818176]
+
+    model 13:
+    trying batch size 64 instead of 32
+    same result
+
+    model 14:
+    increainsg patience to 7 
+    accuracy [0.5817776322364807] 
+
+    model 15:
+    batch size 128
+    accuracy [0.57704097032547]
+
+    model 16
+    added 2 more layers
+    accuracy [0.6071329116821289]
+
+
+    model 17
+    learning rate 0.0001
+    epochs 100
+    early stop patience 10
+
+    accuracy [0.6132627725601196]
+
+    model 18
+    epoch 200
+    batch 128
+    accuracy [0.6213430166244507]
+
+    model 19
+    extract from ck+ dataset disgust photos to balance classes
+    we put half in trainning set and other in val
+    changing to 1 channel gray scale
+    tf.keras.layers.BatchNormalization(),
+    tf.keras.layers.Dense(516, activation='relu'),
+
+    accuracy [0.6188353300094604]
+
+
+    
+
  
 
 

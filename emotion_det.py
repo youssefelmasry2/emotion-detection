@@ -12,8 +12,8 @@ emotion_model = tf.keras.models.load_model('model9')  # Replace with the actual 
 # Define the emotions that your model predicts
 emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
-# Load an image from file or capture from a webcam
-img = cv2.imread('EX_photo\elon.jpg')
+# Load an image from file 
+img = cv2.imread('EX_photo\\happy.jpg')
 
 # Convert the image to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

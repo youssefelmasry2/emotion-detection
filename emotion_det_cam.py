@@ -51,10 +51,10 @@ while True:
         predicted_emotion_label = emotion_labels[predicted_emotion_index]
 
         # Overlay the emotion label on the original frame
-        cv2.putText(frame, f'Emotion: {predicted_emotion_label}', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
+        cv2.putText(frame, f'Emotion: {predicted_emotion_label}', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
         # Draw a rectangle around the face
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
     # Display the result
     cv2.imshow('Emotion Detection', frame)

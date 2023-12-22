@@ -4,7 +4,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Load an image from file or capture from a webcam
-img = cv2.imread('EX_photo\elon.jpg')
+img = cv2.imread('EX_photo\photo2.jpg')
 
 # Check if the image is loaded successfully
 if img is None:
