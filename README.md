@@ -36,7 +36,8 @@ EmoDetect is an innovative project for real-time face emotion detection using de
 3. Optionally, provide an image path as an argument to analyze emotions in a static image.
 
 
-
+used data set: https://www.kaggle.com/datasets/shawon10/ckplus
+https://www.kaggle.com/datasets/astraszab/facial-expression-dataset-image-folders-fer2013
 ## Contributing
 We welcome contributions! If you'd like to contribute or report issues, please check out our [Contribution Guidelines](link-to-contributing.md).
 
