@@ -6,10 +6,10 @@ import tensorflow as tf
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Load your emotion detection model
-emotion_model = tf.keras.models.load_model('model9')  # Replace with the actual path to your model
+emotion_model = tf.keras.models.load_model('CK_model')  # Replace with the actual path to your model
 
 # Define the emotions that your model predicts
-emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
+emotion_labels = ['Angry', 'Contempt', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise']
 
 # Open a connection to the laptop camera (0 is usually the default camera)
 cap = cv2.VideoCapture(0)
@@ -36,10 +36,10 @@ while True:
         face_roi_normalized = face_roi_resized / 255.0
 
         # Convert the grayscale image to three channels (RGB) if your model expects it
-        face_roi_normalized_rgb = cv2.merge([face_roi_normalized] * 3)
+        #face_roi_normalized_rgb = cv2.merge([face_roi_normalized] * 3)
 
         # Reshape the image to match the input shape expected by the model
-        face_roi_input = np.reshape(face_roi_normalized_rgb, (1, 48, 48, 3))
+        face_roi_input = np.reshape(face_roi_normalized, (1, 48, 48, 1))
 
         # Perform emotion detection using the TensorFlow model
         emotion_prediction = emotion_model.predict(face_roi_input)

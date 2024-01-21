@@ -7,7 +7,7 @@ from keras import models
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Load your emotion detection model
-emotion_model = tf.keras.models.load_model('model9')  # Replace with the actual path to your model
+emotion_model = tf.keras.models.load_model('model18')  # Replace with the actual path to your model
 
 # Define the emotions that your model predicts
 emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']

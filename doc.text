@@ -100,8 +100,8 @@ trying to make model3 more complexe by adding layers in model 3
 
     accuracy [0.6188353300094604]
     
-    model 20
-    specfic data augmention for class 1 to help classes imbalance 
+    we go with model 18 final best result
+    
     
 
  
